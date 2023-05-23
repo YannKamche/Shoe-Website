@@ -1,2 +1,2 @@
 # Shoe-Website
-A Nike Shoe fully responsive website built with html, css &amp; Javascript
+A Nike Shoe fully responsive landing page built with html, css &amp; Javascript
