@@ -1,0 +1,338 @@
+:root {
+    --background-body: #333;
+    --navbar-color: #fff;
+    --link-color: #fff;
+    --background-input: transparent;
+    --input-color: #fff;
+    --placeholder-color: #fff;
+    --nav-btn-background: rgba(255, 255, 255, 0.3);
+    --nav-btn-color: #fff;
+    --nav-btn-hover: rgba(255, 255, 255, 0.6);
+    --header-background: #090909;
+    --header-color: #fff;
+    --header-before-background: linear-gradient(45deg, #ccee66, #6e9623);
+    --header-after-color:  rgb(0, 0, 0, 0.1);
+    --button-hover-background:  #6e9623;
+    --button-background:  #a3be52;
+    --color-h1: rgb(37, 228, 212);
+    --color-h2: rgb(37, 228, 212);
+    --nav-link-color: rgb(37, 228, 212);
+    --color-favicon:  #fcc204;
+}
+/* Styles the body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--background-body);
+}
+/* Styles the nav */
+nav {
+    color: var(--navbar-color);
+    z-index: 99;
+    position: relative;
+}
+/* Styles the link in the navbar */
+nav a, header a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+/* Styles the container class */
+nav .container {
+    max-width: 1150px;
+    padding: 1em 2em;
+    margin: 0 auto;
+    
+}
+/* Style div inside container */
+nav .container > div {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    align-items: center;
+   
+}
+/*  Styles the menu, form , footer and watch*/
+nav .menu, nav form, .footer, .footer .watch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Styles the unordered list */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: inline-block;
+}
+/* Styles the list item tag*/
+nav ul li {
+    display: inline-block;
+    margin: 0 0.5em;
+}
+/* Styles the hyperlink */
+nav ul a {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: var(--nav-link-color)
+
+}
+
+/* Styles the form tag */
+nav form {
+    margin-right: 2em;
+}
+/* Styles the input tag */
+nav form input {
+    background: var(--background-input);
+    border: none;
+    width: 12em;
+    color: var(--input-color);
+    padding: 0.5em 1em;
+    outline: none;
+}
+/* Styles the placeholder */
+nav form input::placeholder {
+    color: var(--placeholder-color)
+}
+/* Styles the logo */
+.logo {
+    width: 4em;
+    display: inline-block;
+}
+/* Styles the nav button */
+.nav-btn {
+    background: var(--nav-btn-background);
+    color: var(--nav-btn-color);
+    width: 2.8em;
+    height: 2.8em;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1em;
+}
+/* Nav-btn on hover */
+.nav-btn:hover {
+    background: var(--nav-btn-hover);
+}
+/* Style the menu button */
+nav .container .menu-btn {
+    display: none;
+}
+/* Style the header */
+header {
+    height: 100vh;
+    background: var(--header-background);
+    position: relative;
+    overflow: hidden;
+    color: var(--header-color);
+}
+/* Pseudo class before*/
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -40em;
+    background: var(--header-before-background);
+    width: 100%;
+    height: 100%;
+    transform: rotate(70deg);
+    z-index: 0;
+}
+/* Pseudo class after */
+header::after {
+    content: 'Nike';
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    color: var(--header-after-color);
+    font-size: 17em;
+    font-weight: 700;
+    z-index: 0;
+    /* text-shadow: 5px 5px 2px red; */
+    /* backdrop-filter: blur(5px); */
+}
+/* Styles body class */
+.body {
+    display: grid;
+    justify-content: space-around;
+    align-content: center;
+    grid-template-columns: 2fr 3fr;
+    grid-gap: 2em;
+    height: 75%;
+    position: relative;
+    z-index: 0;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 3em;
+}
+/* Styles h1 */
+.body h1 {
+    font-size: 3.5em;
+    margin: 0.5em 0;
+    color: var(--color-h1);
+}
+/* Styles h4 */
+.body h4 {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+    color: var(--color-h2);
+}
+/* Styles the paragraph */
+.body p {
+    letter-spacing: 2px;
+    line-height: 25px;
+    font-size: 0.9em;
+    margin: 2em 0 3em 0;
+    max-width: 45em;
+}
+/* Styles the button */
+.btn {
+    padding: 0.7em 1.5em;
+    background: var(--button-background);
+    border-radius: 3em;
+    letter-spacing: 1px;
+    font-size: 1em;
+    transition: 0.3s;
+}
+/* Styles the button on hover */
+.btn:hover {
+    background: var(--button-hover-background);
+}
+/* Styles the second div */
+.body > div:nth-child(2) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+/* Steyls the icons */
+.body .fas {
+    color: var(--color-favicon);
+}
+.body img {
+    width: 45em;
+    transform: rotate(-25deg);
+    filter: drop-shadow(
+        30px 45px 40px #161616
+    )
+}
+/* Style the footer */
+.footer {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 3em;
+    position: relative;
+}
+/* Styles the links in the footer */
+.footer a {
+    margin: 0 0.4em;
+    font-size: 1.2em;
+}
+/* Styles the play-icon */
+.footer .play-icon {
+    border: 3px solid #fff;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    text-align: center;
+    line-height: 3em;
+    font-size: 1.3em;
+    box-shadow: 0px 0px 15px 3px #fff;
+    margin-right: 1.8em;
+    transition: 0.3s;
+    cursor:pointer ;
+}
+/* Action on hover */
+.footer .play-icon:hover {
+    background-color: rgb(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 0px transparent;
+}
+
+/* Media Queries*/
+@media screen and (max-width: 1000px) {
+    nav .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    nav .container > div {
+        grid-template-columns: 1fr;
+    }
+    nav .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 0;
+        overflow: hidden;
+        transition: 0.7s;
+    }
+    nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+    nav ul li:nth-child(1) {
+        margin-top: 1.5em;
+    }
+
+    nav .container .menu-btn {
+        display: inline-block;
+        font-size: 1.4em;
+        cursor: pointer;
+    }
+    nav .container .nav-toggle {
+        height: 16em;   
+    }
+}
+@media screen and (max-width: 1210px) {
+    nav {
+        margin-bottom: 2em;
+    }
+    .body {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    header::before {
+        display: none;
+    }
+    header {
+        height: initial;
+    }
+    .body > div:nth-child(2) {
+        justify-content: center;
+        margin: 3em 0;
+    }
+    .body img {
+        transform: none;
+    }
+    .body p {
+        margin: 2em auto 3em auto;
+    }
+}
+@media screen and (max-width: 800px) {
+    html {
+        font-size: 14px;
+    }
+    .body img{
+        width: 90%;
+    }
+    .footer {
+        flex-direction: column;
+        margin-top: 3em;
+    }
+    .watch {
+        margin: 2em 0;
+        flex-direction: column;
+    }
+    .footer .play-icon {
+        margin: 0;
+    }
+}
+@media screen and (max-height: 650px) {
+    header {
+        height: initial;
+    }
+    .footer {
+        margin: 4em auto 2em auto;
+    }
+
+}
